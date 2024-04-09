@@ -6,6 +6,7 @@ node_modules
 .husky
 
 # Hardhat files
+/dist
 /cache
 /artifacts
 /ignition
@@ -38,7 +39,6 @@ node_modules/
 **/*.less
 **/*.css
 **/*.scss
-**/*.json
 **/*.png
 **/*.svg
 **/generated/**/*
