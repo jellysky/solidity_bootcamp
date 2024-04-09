@@ -1,16 +1,15 @@
-# folders
-.next
-.yarn
-.git
-.husky
-node_modules/
-# files
-**/*.env
-**/*.eslintrc.js
-**/*.less
-**/*.css
-**/*.scss
-**/*.json
-**/*.png
-**/*.svg
-**/generated/**/*
+node_modules
+.env
+
+# Hardhat files
+/cache
+/artifacts
+/ignition
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json

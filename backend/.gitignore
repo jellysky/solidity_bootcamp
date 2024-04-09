@@ -1,0 +1,45 @@
+node_modules
+.env
+.next
+.yarn
+.git
+.husky
+
+# Hardhat files
+/cache
+/artifacts
+/ignition
+**/artifacts
+**/cache
+**/deploy
+**/deployments
+**/typechain-types
+**/hooks
+**/public
+**/services
+**/styles
+**/types
+**/utils
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+# folders
+
+node_modules/
+# files
+**/*.env
+**/*.eslintrc.js
+**/*.less
+**/*.css
+**/*.scss
+**/*.json
+**/*.png
+**/*.svg
+**/generated/**/*
+
