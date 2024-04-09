@@ -1,0 +1,16 @@
+# folders
+.next
+.yarn
+.git
+.husky
+node_modules/
+# files
+**/*.env
+**/*.eslintrc.js
+**/*.less
+**/*.css
+**/*.scss
+**/*.json
+**/*.png
+**/*.svg
+**/generated/**/*
