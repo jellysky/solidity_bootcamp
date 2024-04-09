@@ -11,8 +11,6 @@ node_modules
 /ignition
 **/artifacts
 **/cache
-**/deploy
-**/deployments
 **/typechain-types
 **/hooks
 **/public
