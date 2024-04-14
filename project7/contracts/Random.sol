@@ -2,11 +2,7 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 contract Random {
-    function getRandomNumber()
-        public
-        view
-        returns (uint256 randomNumber)
-    {
+    function getRandomNumber() public view returns (uint256 randomNumber) {
         randomNumber = block.prevrandao;
     }
 

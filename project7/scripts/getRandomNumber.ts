@@ -98,7 +98,7 @@ async function main() {
           randomSealedSeed();
           break;
         case 6:
-          // TODO
+          randao();
           break;
         default:
           console.log("Invalid");
