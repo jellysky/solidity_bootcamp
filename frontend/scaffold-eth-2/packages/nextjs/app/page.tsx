@@ -49,7 +49,7 @@ function WalletInfo() {
       <WalletAction></WalletAction>
       <WalletBalance address={address as `0x${string}`}></WalletBalance>
       <TokenInfo address={address as `0x${string}`}></TokenInfo>
-      <ApiData address={address as `0x${string}`}></ApiData>
+      <ApiData address={address as `0x${string}`} proposal={0} amount={""}></ApiData>
     </div>
     );
   if (isConnecting)
@@ -230,9 +230,12 @@ function RandomWord() {
   );
 }
 
-function ApiData(params: {proposal: number; amount: string; address: `0x${string}` }) {
+function ApiData(params: {proposal: number; amount: string; address: string }) {
+  
+  console.log(params.address);
+  
   return (
-    <div className="card w-96 bg-primary text-primary-content mt-4">
+    <div className="card w-150 bg-primary text-primary-content mt-4">
       <div className="card-body">
         <h2 className="card-title">Testing API Coupling ... </h2>
         <TokenAddressFromApi></TokenAddressFromApi>
@@ -364,19 +367,18 @@ function GetVotes(params: { address: string }) {
   const [data, setData] = useState<{ result: boolean }>();
   const [isLoading, setLoading] = useState(false);
 
-  const body = { address: params.address };
-
-  if (isLoading) return <p>Getting votes via API...</p>;
+  if (isLoading) return <p>Getting votes from API...</p>;
   if (!data)
     return (
       <button
         className="btn btn-active btn-neutral"
         onClick={() => {
           setLoading(true);
-          fetch("http://localhost:3001/get-votes", {
-            method: "POST",
+          // Constructing the URL with a query parameter
+          const url = `http://localhost:3001/get-votes?address=${encodeURIComponent(params.address)}`;
+          fetch(url, {
+            method: "GET",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(body),
           })
             .then((res) => res.json())
             .then((data) => {
@@ -391,10 +393,11 @@ function GetVotes(params: { address: string }) {
 
   return (
     <div>
-      <p>Result from API: {data.result ? 'worked' : 'failed'}</p>
+      <p>Result from API: {data.result}</p>
     </div>
   );
 }
+
 
 function Vote(params: {proposal: number, amount: string }) {
   const [data, setData] = useState<{ result: boolean }>();
@@ -427,7 +430,7 @@ function Vote(params: {proposal: number, amount: string }) {
 
   return (
     <div>
-      <p>Result from API: {data.result ? 'worked' : 'failed'}</p>
+      <p>Result from API: {data.result}</p>
     </div>
   );
 }

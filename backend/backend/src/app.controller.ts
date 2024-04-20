@@ -25,7 +25,6 @@ export class AppController {
     return {result: this.appService.getContractAddressBallot()};
   }
 
-
   @Get('token-name')
   async getTokenName() {
     return {result: await this.appService.getTokenName()};

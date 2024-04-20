@@ -1,0 +1,86 @@
+# dependencies
+**/node_modules
+**/.next
+**/public
+**/services
+**/styles
+**/typescriptutils
+**/out/
+**/.vercel
+
+# yarn
+.yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+**/.husky
+**/.github
+**/.yarn
+
+# eslint
+**/.eslintcache
+
+# misc
+.DS_Store
+
+# IDE
+.vscode
+.idea
+
+# cli
+dist
+
+# env files
+**/.env
+**/.pnp
+**/.pnp.js
+
+# coverage
+**/coverage
+**/coverage.json
+
+# typechain
+**/typechain
+**/typechain-types
+
+# hardhat files
+**/cache
+**/artifacts
+**/deployments
+
+# zkSync files
+artifacts-zk
+cache-zk
+
+# testing
+**/coverage
+
+# next.js
+/.next/
+
+# production
+**/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.pnpm-debug.log*
+
+# local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# typescript
+*.tsbuildinfo
